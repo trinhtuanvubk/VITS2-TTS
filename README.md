@@ -7,8 +7,8 @@ Unofficial implementation of the [VITS2 paper](https://arxiv.org/abs/2307.16430)
 Single-stage text-to-speech models have been actively studied recently, and their results have outperformed two-stage pipeline systems. Although the previous single-stage model has made great progress, there is room for improvement in terms of its intermittent unnaturalness, computational efficiency, and strong dependence on phoneme conversion. In this work, we introduce VITS2, a single-stage text-to-speech model that efficiently synthesizes a more natural speech by improving several aspects of the previous work. We propose improved structures and training mechanisms and present that the proposed methods are effective in improving naturalness, similarity of speech characteristics in a multi-speaker model, and efficiency of training and inference. Furthermore, we demonstrate that the strong dependence on phoneme conversion in previous works can be significantly reduced with our method, which allows a fully end-toend single-stage approach.
 
 ## Credits
-- We will build this repo based on the [VITS repo](https://github.com/jaywalnut310/vits). The goal is to make this model easier to transfer learning from VITS pretrained model!
-- (08-17-2023) - The authors were really kind to guide me through the paper and answer my questions. I am open to discuss any changes or answer questions regarding the implementation. Please feel free to open an issue or contact me directly.
+- This repository is a derivative of the [vits2-pytorch](https://github.com/p0p4k/vits2_pytorch/) by p0p4k and the original vits [vits repo](https://github.com/jaywalnut310/vits) . It builds upon their work and incorporates additional features and modifications specific to this project.
+
 
 # Pretrained checkpoints
 - [LJSpeech-no-sdp](https://drive.google.com/drive/folders/1U-1EqBMXqmEqK0aUhbCJOquowbvKkLmc?usp=sharing) (refer to config.yaml in this checkppoint folder) | 64k steps | proof that training works!
