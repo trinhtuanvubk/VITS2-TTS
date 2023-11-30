@@ -30,6 +30,7 @@ python setup.py build_ext --inplace
 ### Prepare data
 
 - In this repository, you should have some folders like below:
+```
 |__data
 |   |__wavs
 |       |__audiofile0.wav
@@ -38,7 +39,7 @@ python setup.py build_ext --inplace
 |__filelists
 |   |__audio_text_train_filelist.txt
 |   |__audio_text_val_filelist.txt
-
+```
 - Run prepare to gen `cleaned` filelist
 ```bash
 python3 preprocess.py --filelists filelists/audio_text_train_filelist.txt filelists/audio_text_val_filelist.txt
