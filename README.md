@@ -49,20 +49,27 @@ python3 preprocess.py --filelists filelists/audio_text_train_filelist.txt fileli
 Would recommend experts to rename the ckpts to *_0.pth and starting the training using transfer learning. (I will add a notebook for this soon to help beginers).
 
 
-## Training
+### Training
 - To training:
 ```bash
 python train.py -c configs/vits2_ljs_nosdp.json -m ljs_base
 ```
-- To infer with .pth model:
-```bash
-python inference.py --model="path/to/G_model.pth" --config-path="path/to/config.json" --output-wav-path="output.wav" --text="hello world, how are you?"
-```
+
+### Export Onnx
 - To export onnx:
 ```bash
 python export_onnx.py --model-path="G_64000.pth" --config-path="config.json" --output="vits2.onnx"
+```
+
+
+### Inference
+- To infer with .pth model:
+```bash
+python inference.py --model="path/to/G_model.pth" --config-path="path/to/config.json" --output-wav-path="output.wav" --text="hello world, how are you?"
 ```
 - To infer with onnx model:
 ```bash
 python infer_onnx.py --model="vits2.onnx" --config-path="config.json" --output-wav-path="output.wav" --text="hello world, how are you?"
 ```
+
+
