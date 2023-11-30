@@ -19,7 +19,8 @@ def get_text(text, hps):
 
 
 CONFIG_PATH = "./configs/vits2_ljs_nosdp.json"
-MODEL_PATH = "./logs/ljs_base/G_7000.pth"
+# MODEL_PATH = "./logs/ljs_base/G_14000.pth"
+MODEL_PATH = "logs/ckpt_vits2/G_0.pth"
 TEXT = "He was seen afterwards smoking and talking with his hosts"
 OUTPUT_WAV_PATH = "sample_vits2.wav"
 

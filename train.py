@@ -3,6 +3,11 @@ import json
 import argparse
 import itertools
 import math
+import os
+os.environ["CUDA_VISIBLE_DEVICES"] = "0,1"
+from numba.core.errors import NumbaWarning
+import warnings
+warnings.simplefilter('ignore', category=NumbaWarning)
 import torch
 from torch import nn, optim
 from torch.nn import functional as F
@@ -163,7 +168,7 @@ def run(rank, n_gpus, hps):
         and hps.model.use_duration_discriminator == True
     ):
         # print("Using duration discriminator for VITS2")
-        use_duration_discriminator = False
+        # use_duration_discriminator = False
         duration_discriminator_type = hps.model.duration_discriminator_type
         print(f"Using duration_discriminator {duration_discriminator_type} for VITS2")
         assert duration_discriminator_type in AVAILABLE_DURATION_DISCRIMINATOR_TYPES, f"duration_discriminator_type must be one of {AVAILABLE_DURATION_DISCRIMINATOR_TYPES}"
