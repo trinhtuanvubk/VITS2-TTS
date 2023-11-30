@@ -42,7 +42,8 @@ python setup.py build_ext --inplace
 ```
 - Run prepare to gen `cleaned` filelist
 ```bash
-python3 preprocess.py --filelists filelists/audio_text_train_filelist.txt filelists/audio_text_val_filelist.txt
+python3 preprocess.py \
+--filelists filelists/audio_text_train_filelist.txt filelists/audio_text_val_filelist.txt
 ```
 
 ### Pretrained checkpoints
