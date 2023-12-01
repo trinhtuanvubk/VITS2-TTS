@@ -54,7 +54,7 @@ Would recommend experts to rename the ckpts to *_0.pth and starting the training
 ### Training
 - To training:
 ```bash
-python train.py -c configs/vits2_ljs_nosdp.json -m ljs_base
+python train.py -c configs/vits2_nosdp.json -m hihi
 ```
 
 ### Export Onnx
