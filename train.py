@@ -3,8 +3,8 @@ import json
 import argparse
 import itertools
 import math
-import os
-os.environ["CUDA_VISIBLE_DEVICES"] = "0,1"
+# import os
+# os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 from numba.core.errors import NumbaWarning
 import warnings
 warnings.simplefilter('ignore', category=NumbaWarning)

@@ -40,7 +40,7 @@ python setup.py build_ext --inplace
 |   |__audio_text_train_filelist.txt
 |   |__audio_text_val_filelist.txt
 ```
-- Run prepare to gen `cleaned` filelist
+- Run prepare to gen `cleaned` filelist, check `filelists` to see example
 ```bash
 python3 preprocess.py \
 --filelists filelists/audio_text_train_filelist.txt filelists/audio_text_val_filelist.txt
@@ -48,15 +48,14 @@ python3 preprocess.py \
 
 ### Pretrained checkpoints
 - [LJSpeech-no-sdp](https://drive.google.com/drive/folders/1U-1EqBMXqmEqK0aUhbCJOquowbvKkLmc?usp=sharing) (refer to config.yaml in this checkppoint folder) | 64k steps | proof that training works!
-Would recommend experts to rename the ckpts to *_0.pth and starting the training using transfer learning. (I will add a notebook for this soon to help beginers).
+- Would recommend to rename the folder to your `<model_name>` and rename the ckpts to *_0.pth and starting the training using transfer learning.
 
 
 ### Training
 - To training:
 ```bash
-python train.py -c configs/vits2_nosdp.json -m hihi
+CUDA_VISIBLE_DEVICES=0 python train.py -c configs/vits2_nosdp.json -m <model_name>
 ```
-
 ### Export Onnx
 - To export onnx:
 ```bash
@@ -71,7 +70,7 @@ python export_onnx.py \
 - To infer with .pth model:
 ```bash
 python inference.py \
---model="path/to/G_model.pth" \
+--model="path/to/model_name/G_model.pth" \
 --config-path="path/to/config.json" \
 --output-wav-path="output.wav" \
 --text="hello world, how are you?"

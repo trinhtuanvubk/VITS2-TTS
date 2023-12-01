@@ -19,9 +19,9 @@ def get_text(text, hps):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model", default="logs/ckpt_vits2/G_0.pth", help="Path to model (.onnx)")
+    parser.add_argument("--model", default="logs/hihi/G_0.pth", help="Path to model")
     parser.add_argument(
-        "--config-path", default="./configs/vits2_ljs_nosdp.json", help="Path to model config (.json)"
+        "--config-path", default="./configs/vits2_nosdp.json", help="Path to model config (.json)"
     )
     parser.add_argument(
         "--output-wav-path", default= "sample_vits2.wav", help="Path to write WAV file"
